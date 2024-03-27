@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Counsel | Terms And Conditions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/Prime counsel chatbot.png' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+
+  <!-- Popup Form START -->
+  <div id="form-bg">
+    <form action="{% url 'book_appointment' %}" method="POST" id="myForm" autocomplete="off">
+      {% csrf_token %}
+      <div class="popup">
+        <div class="close-btn" onclick="closeForm()">&times;</div>
+        <div class="form">
+          <h2>Book an appoinment</h2>
+          <div class="form-element">
+            <input type="text" placeholder="Name" name="Name" required>
+          </div>
+          <div class="services-form">
+            <select name="Services" id="Services" required>
+              <option value="">Services</option>
+              <option value="Legal Document Review">Legal Document Review</option>
+              <option value="Case Summerisation">Case Summerisation</option>
+              <option value="Lease Abstraction Project">Lease Abstraction Project</option>
+              <option value="Contract Management Project">Contract Management Project</option>
+              <option value="Legal audit">Legal audit</option>
+              <option value="Legal Training For NBFCS And New Ventures">Legal Training For NBFCS And New Ventures
+              </option>
+              <option value="Training The Companies On Legal Induction">Training The Companies On Legal Induction
+              </option>
+            </select>
+          </div>
+          <div class="date-form">
+            <div class="qutar-form">
+              <select name="day" id="day" required>
+                <option value="" class="day">DAY</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="qutar-form">
+              <select name="month" id="month" required>
+                <option value="" class="month">MONTH</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="qutar-form">
+              <select name="year" id="year" required>
+                <option value="" class="year">YEAR</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-element">
+            <input type="email" id="email" required placeholder="Email" name="email" autocomplete="off">
+          </div>
+           <div class="form-element">
+            <input type="tel" id="phone" required placeholder="Phone" name="Phone">
+          </div>
+          <div class="form-element">
+            <input type="submit" value="Book Appoinment">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- Popup Form END -->
+
+
+  <!-- Header START -->
+  <!-- Scroll Bar START -->
+  <div id="topbar">
+    <li><i class="fa-sharp fa-solid fa-location-dot"></i>Chennai</li>
+    <li><i class="fa-solid fa-square-phone"></i>+91 8925863894</li>
+    <li><i class="fa-sharp fa-solid fa-envelope"></i>info@primecounselsolutions.com</li>
+  </div>
+  <!-- Scroll Bar END -->
+
+    <header class="otherNav" style="background-image: linear-gradient(rgba(0, 0, 0, .5),
+                                                      rgba(0, 0, 0, .5)),
+                                                      url('{% static 'images/terms and conditions.jpeg' %}');">
+      <div class="navbar">
+        <div class="logo">
+          <a href="{% url 'index' %}" >
+            <img src="{% static 'images/Prime council logo White New.png' %}" alt=""></a>
+          </div>
+        <ul class="links">
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}" >About Us</a></li>
+          <li><a href="{% url 'team' %}" >Our Team</a></li>
+          <li><a href="{% url 'contact' %}" >Contact Us</a></li>
+        </ul>
+        <button class="action-btn" onclick="openForm()">Book an Appoinment</button>
+        <div class="toggle-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="dropdown-menu">
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="{% url 'about' %}" >About Us</a></li>
+          <li><a href="{% url 'team' %}" >Our Team</a></li>
+          <li><a href="{% url 'contact' %}" >Contact Us</a></li>
+          <li>
+            <button class="action-btn" onclick="openForm()">Book an Appoinment</button>
+          </li>
+        </div>
+      </div>
+      <h1>TERMS AND CONDITIONS</h1>
+    </header>
+    <!-- Header END -->
+
+    <!-- Main Body START -->
+    <main class="terms-main">
+
+      <h1>I. Welcome to Prime Counsel Solutions</h1>
+      <p>These terms and conditions outline the rules and regulations for the use of Prime Counsel Solutions 's Website,
+        by accessing this website we assume you accept these terms and conditions. Do not continue to use Prime Counsel
+        Solution website if you do not agree to take all the terms and conditions stated on this page.</p>
+
+      <h1>II. Terminology for Terms and conditions</h1>
+      <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and
+        all Agreements: "Client", "You" and "“Your" refers to you, the person log on this website and compliant to the
+        Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company.
+        "Party", "Parties", or "Us", refers to both the Client and us. All terms refer to the offer, acceptance, and
+        consideration of payment necessary to undertake the process of our assistance to the Client in the most
+        appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the
+        Company's stated services, in accordance with and subject to, prevailing law of in. Any use of the above
+        terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as
+        interchangeable and therefore as referring to same.</p>
+
+      <h1>III. Cookies</h1>
+      <p>We employ the use of cookies. By accessing Our website, you agreed to use cookies in agreement with the Prime
+        Counsel Solutions 's Privacy Policy. Most interactive websites use cookies to let us retrieve the user's details
+        for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier
+        for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+
+      <h1>IV. License</h1>
+      <p>Unless otherwise stated, Prime Counsel Solutions and/or its licensors own the intellectual property rights for
+        all material on the website. All intellectual property rights are reserved. You may access this from our website
+        for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+      <h1>V. You must not:</h1>
+      <ol class="point">
+        <li>Republish material from our website.</li>
+        <li>Sell, rent or sub-license material from our website.</li>
+        <li>Reproduce, duplicate, or copy material from our website.</li>
+        <li>Redistribute content from our website.</li>
+      </ol>
+
+      <h1>VI. Liability</h1>
+      <p>Prime Counsel Solutions does not filter, edit, publish, or review Comments prior to their presence on the
+        website. Comments do not reflect the views and opinions of Prime Counsel Solutions, its agents and/or
+        affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the
+        extent permitted by applicable laws, Prime Counsel Solutions shall not be liable for the Comments or for any
+        liability, damages or expenses caused and/or suffered because of any use of and/or posting of and/or appearance
+        of the Comments on this website. Prime Counsel Solutions reserves the right to monitor all Comments and to
+        remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and
+        Conditions.</p>
+
+      <h1>VII. Users warrant and represent that:</h1>
+      <ol class="point">
+        <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so.</li>
+        <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent, or trademark of any third party.</li>
+        <li>The Comments do not contain any defamatory, libelous, offensive, indecent, or otherwise unlawful material which is an invasion of privacy.</li>
+        <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+      </ol>
+      <p>You hereby grant Prime Counsel Solutions a non-exclusive license to use, reproduce, edit, and authorize others to use, reproduce and edit any of your Comments in all forms, formats, or media.</p>
+
+      <h1>VIII.	Intellectual Property</h1>
+      <p>No use of Prime Counsel Solutions 's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+
+      <h1>IX. Disclaimer of lawyer-client relationship</h1>
+      <p>Prime Counsel Solutions is not an agent of lawyers. It only facilitates the communication of lawyers and potential clients. Any electronic communication sent to Prime Counsel Solutions alone will not create a lawyer-client relationship between the user and Prime Counsel Solutions, such being expressly denied.</p>
+
+      <h1>X.	Prime Counsel Solutions does not provide Legal Advice</h1>
+      <p>Prime Counsel Solutions ‘Common Needs’ feature uses only user supplied content to produce basic documents. The information provided in the ‘FAQs’ section also does not amount to legal advice. Users are advised to consult lawyers if they need specialized guidance on any of these documents.</p>
+
+      <h1>XI.	Understanding of Business Model and Legal Policies:</h1>
+      <p>The website will outline the process of understanding the client's business model, creating legal policies, and ensuring compliance with relevant laws and regulations.</p>
+      <ol class="point">
+        <li><span>Consultation Process:</span> The website will outline the process of understanding the client's business model, including conducting initial consultations to gather relevant information and assess the legal needs of the client.</li>
+        <li><span>Customized Legal Policies:</span> The website will offer customized legal policies tailored to the specific business model of the client, considering industry regulations, best practices, and individual requirements.</li>
+        <li><span>Compliance Assurance:</span> The terms and conditions will include provisions ensuring that the legal policies created by the website are in compliance with applicable laws and regulations, and that any updates or changes will be communicated to the client promptly.</li>
+        <li><span>Confidentiality:</span> The terms will address the confidentiality of the information shared during the consultation and policy creation process, outlining the measures taken to protect sensitive data and maintain client confidentiality.</li>
+        <li><span>Client Responsibilities:</span> The terms may specify the responsibilities of the client in providing accurate and complete information about their business model, as well as cooperating with the website in the development and implementation of legal policies.</li>
+        <li><span>Limitations of Liability:</span> The terms may include limitations on the liability of the website in relation to the effectiveness or outcomes of the legal policies created, emphasizing that legal advice is provided for informational purposes only.</li>
+      </ol>
+
+      <h1>XII. 360 Degree View of Legal Risks :</h1>
+      <p>The website will offer an in-depth analysis of potential legal risks that could impact the client's business operations.</p>
+      <ol class="alpha">
+        <li><span>Scope of Services:</span> The terms and conditions will outline the scope of the services provided by the website, including the comprehensive assessment of legal risks from all angles to offer a 360-degree view.</li>
+        <li><span>Risk Assessment Process:</span> The terms will detail the methodology and process used by the website to identify, analyse, and evaluate legal risks across various aspects of the client's business operations.</li>
+        <li><span>Customized Risk Mitigation Strategies:</span> The terms will include provisions for developing customized risk mitigation strategies based on the findings of the 360-degree legal risk assessment, tailored to the specific needs and objectives of the client.</li>
+        <li><span>Continuous Monitoring and Updates:</span> The terms may specify that the website will continuously monitor legal developments and update the risk assessment as needed to ensure ongoing compliance and risk management.</li>
+        <li><span>Client Collaboration:</span> The terms will outline the client's role in providing relevant information, feedback, and cooperation throughout the legal risk assessment process to ensure the effectiveness of the strategies implemented.</li>
+        <li><span>Confidentiality and Data Security:</span> Provisions will be included to address the confidentiality of information shared during the risk assessment, as well as the measures taken to secure data and protect sensitive information.</li>
+        <li><span>Limitations of Liability:</span> The terms may include limitations on the liability of the website in relation to the accuracy or outcomes of the legal risk assessment and mitigation strategies, emphasizing that legal advice is provided for informational purposes only.</li>
+      </ol>
+
+
+    </main>
+    <!-- Main Body END -->
+
+    <!-- Footer START -->
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+        <div class="wave" id="wave2" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+        <div class="wave" id="wave3" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+        <div class="wave" id="wave4" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+     </div>
+
+      <ul class="social-icon">
+          <li><a href="https://www.linkedin.com/company/100528883/admin/feed/posts/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.instagram.com/primecounselsolutions/
+              "><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://facebook.com/people/Prime-Counsel-Solutions/61556872824057/
+              "><i class="fa-brands fa-facebook-f"></i></a></li>
+      </ul>
+      <ul class="footer-menu">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'team' %}">Our Team</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+      </ul>
+      <ul class="legal">
+          <li><a href="{% url 'privacypolicy' %}">Privacy Policy</a></li>
+          <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+          <li><a href="">Cookies</a></li>
+      </ul>
+      <p>© <span id="curentYear"></span>-All Rights Reserved.</p>
+  </footer>
+    <!-- Footer START -->
+
+
+
+
+    <!-- main css -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- fontawsome plugin -->
+    <script src="https://kit.fontawesome.com/f2705e980a.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

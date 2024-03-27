@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Counsel | TRAINING THE COMPANIES ON LEGAL INDUCTION</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/Prime counsel chatbot.png' %}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="products">
+
+  <!-- Popup Form START -->
+  <div id="form-bg">
+    <form action="{% url 'book_appointment' %}" method="POST" id="myForm" autocomplete="off">
+      {% csrf_token %}
+      <div class="popup">
+        <div class="close-btn" onclick="closeForm()">&times;</div>
+        <div class="form">
+          <h2>Book an appoinment</h2>
+          <div class="form-element">
+            <input type="text" placeholder="Name" name="Name" required>
+          </div>
+          <div class="services-form">
+            <select name="Services" id="Services" required>
+              <option value="">Services</option>
+              <option value="Legal Document Review">Legal Document Review</option>
+              <option value="Case Summerisation">Case Summerisation</option>
+              <option value="Lease Abstraction Project">Lease Abstraction Project</option>
+              <option value="Contract Management Project">Contract Management Project</option>
+              <option value="Legal audit">Legal audit</option>
+              <option value="Legal Training For NBFCS And New Ventures">Legal Training For NBFCS And New Ventures
+              </option>
+              <option value="Training The Companies On Legal Induction">Training The Companies On Legal Induction
+              </option>
+            </select>
+          </div>
+          <div class="date-form">
+            <div class="qutar-form">
+              <select name="day" id="day" required>
+                <option value="" class="day">DAY</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="qutar-form">
+              <select name="month" id="month" required>
+                <option value="" class="month">MONTH</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="qutar-form">
+              <select name="year" id="year" required>
+                <option value="" class="year">YEAR</option>
+                <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-element">
+            <input type="email" id="email" required placeholder="Email" name="email" autocomplete="off">
+          </div>
+           <div class="form-element">
+            <input type="tel" id="phone" required placeholder="Phone" name="Phone">
+          </div>
+          <div class="form-element">
+            <input type="submit" value="Book Appoinment">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- Popup Form END -->
+
+
+  <!-- Header START -->
+  <!-- Scroll Bar START -->
+  <div id="topbar">
+    <li><i class="fa-sharp fa-solid fa-location-dot"></i>Chennai</li>
+    <li><i class="fa-solid fa-square-phone"></i>+91 8925863894</li>
+    <li><i class="fa-sharp fa-solid fa-envelope"></i>info@primecounselsolutions.com</li>
+  </div>
+  <!-- Scroll Bar END -->
+
+  <header class="otherNav" style="background-image: linear-gradient(rgba(0, 0, 0, .5),
+                                                    rgba(0, 0, 0, .5)),
+                                                    url('{% static 'images/blur.png' %}');">
+    <div class="navbar">
+      <div class="logo">
+        <a href="{% url 'index' %}" >
+          <img src="{% static 'images/Prime council logo White New.png' %}" alt=""></a>
+      </div>
+      <ul class="links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}" >About Us</a></li>
+        <li><a href="{% url 'team' %}" >Our Team</a></li>
+        <li><a href="{% url 'contact' %}" >Contact Us</a></li>
+      </ul>
+      <button class="action-btn" onclick="openForm()">Book an Appoinment</button>
+      <div class="toggle-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="dropdown-menu">
+        <li><a href="{% url 'index' %}" >Home</a></li>
+        <li><a href="{% url 'about' %}" >About Us</a></li>
+        <li><a href="{% url 'team' %}" >Our Team</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <li>
+          <button class="action-btn" onclick="openForm()">Book an Appoinment</button>
+        </li>
+      </div>
+    </div>
+    <h1>OUR PRODUCT AND SERVICES</h1>
+  </header>
+  <!-- Header END -->
+
+  <!-- Main Body START -->
+  <main>
+    <h1 class="product">TRAINING THE COMPANIES ON LEGAL INDUCTION</h1>
+    <div class="training content">
+
+    <h2>WHAT WE PROVIDE IN TRAINING:</h2>
+    <p>Training companies on legal induction involves providing comprehensive education and guidance to employees
+      regarding the legal aspects of their roles within the organization. This training typically covers topics such as
+      company policies, compliance with laws and regulations, ethical standards, and best practices for handling legal
+      issues in the workplace. Training may include workshops, seminars, online courses, and resources to help employees
+      navigate legal challenges effectively.</p>
+
+    <h2>AIM</h2>
+    <p>The goal is to ensure that employees understand their legal responsibilities, minimize legal risks for the
+      company, and promote a culture of compliance and integrity. By investing in legal induction training, companies
+      can protect themselves from potential legal liabilities and create a more informed and responsible workforce. We
+      train new employees about the legal framework within which the company operates. Legal induction training
+      typically covers topics such as employment laws, data protection regulations, intellectual property rights, and
+      ethical standards. Familiarize them with company policies, procedures, and legal obligations to ensure compliance
+      and mitigate risks. This helps employees understand their legal responsibilities, minimize legal risks for the
+      company, and promote a culture of compliance and integrity.</p>
+
+    <p class="bold">QUOTE:
+      <br>
+      "Proper legal induction training is essential for companies to ensure compliance and minimize the risk of legal issues.
+      <br>
+      Invest in training now to protect your business in the long run."
+    </p>
+  </div>
+  </main>
+  <!-- Main Body END -->
+
+
+  <!-- Footer START -->
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+      <div class="wave" id="wave2" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+      <div class="wave" id="wave3" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+      <div class="wave" id="wave4" style="background: url('{% static 'images/wave reddd.jpeg.jpg' %}');"></div>
+   </div>
+
+    <ul class="social-icon">
+        <li><a href="https://www.linkedin.com/company/100528883/admin/feed/posts/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.instagram.com/primecounselsolutions/
+            "><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://facebook.com/people/Prime-Counsel-Solutions/61556872824057/
+            "><i class="fa-brands fa-facebook-f"></i></a></li>
+    </ul>
+    <ul class="footer-menu">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'team' %}">Our Team</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    </ul>
+    <ul class="legal">
+        <li><a href="{% url 'privacypolicy' %}">Privacy Policy</a></li>
+        <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+        <li><a href="">Cookies</a></li>
+    </ul>
+    <p>© <span id="curentYear"></span>-All Rights Reserved.</p>
+</footer>
+  <!-- Footer START -->
+
+
+  <!-- fontawesome plugin -->
+  <script src="https://kit.fontawesome.com/f2705e980a.js" crossorigin="anonymous"></script>
+  <!-- main js -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
